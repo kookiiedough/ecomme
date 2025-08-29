@@ -12,8 +12,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="application/ld+json">
 {
@@ -43,10 +41,15 @@
 "releaseNotes":"Soft launch (closed beta). Manual assist to ensure quality."
 }
 </script>
+
+<!-- Additional fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap">
 <style>
 .font-geist { font-family: 'Geist', sans-serif !important; }
 .font-geist-mono { font-family: 'Geist Mono', monospace !important; }
 </style>
+
 </head>
 <body class="antialiased bg-black text-slate-100" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial;">
 
@@ -57,76 +60,241 @@
 </script>
 </div>
 
-<!-- Top Beta Honesty Strip -->
-<div class="w-full border-b bg-red-950 border-red-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-xs sm:text-sm flex items-center justify-between text-red-100">
-    <div class="flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"></path><path d="M6.453 15h11.094"></path><path d="M8.5 2h7"></path></svg>
-      <span class="font-geist-mono text-red-100">Early access: We're onboarding a small cohort to co‑shape ReturnLess. Want in?</span>
+  <!-- Top Beta Honesty Strip -->
+  <div class="w-full border-b bg-red-950 border-red-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 text-xs sm:text-sm flex items-center justify-between text-red-100">
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"></path><path d="M6.453 15h11.094"></path><path d="M8.5 2h7"></path></svg>
+        <span class="font-geist-mono text-red-100">Early access: We're onboarding a small cohort to co‑shape ReturnLess. Want in?</span>
+      </div>
+      <a href="#roi-preview" class="hidden sm:inline-flex items-center gap-1 font-geist-mono text-red-300 hover:text-red-200">
+        Join the beta
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
     </div>
-    <a href="#roi-preview" class="hidden sm:inline-flex items-center gap-1 font-geist-mono text-red-300 hover:text-red-200">
-      Join the beta
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-    </a>
   </div>
-</div>
 
-<!-- Simple content for now -->
-<div class="max-w-4xl mx-auto px-4 py-20 text-center">
-  <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-geist-mono">
-    Stop shipping your profits back.
-  </h1>
-  <p class="text-xl text-gray-300 mb-8 font-geist-mono">
-    ReturnLess chooses the smartest outcome for every return—keep‑it, exchange, donate, refurbish, resell, or ship‑back—and shows your measured savings.
-  </p>
-  <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex justify-center">
-    <a href="#roi-preview" class="inline-flex items-center justify-center px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-100 font-geist-mono">
-      Join the beta
-    </a>
-    <a href="#roi-preview" class="inline-flex items-center justify-center px-8 py-3 border border-gray-700 text-white font-semibold rounded-full hover:bg-gray-900 font-geist-mono">
-      Get an ROI preview
-    </a>
-  </div>
-  <p class="text-sm text-gray-500 mt-4 font-geist-mono">Limited to 5 new merchants this month.</p>
-</div>
-
-<div id="roi-preview" class="max-w-2xl mx-auto px-4 py-16">
-  <h2 class="text-3xl font-bold text-white mb-8 text-center font-geist-mono">Get your ROI preview (free)</h2>
-  <form name="beta-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="bg-gray-900 p-8 rounded-xl border border-gray-800">
-    <p class="hidden">
-      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-    </p>
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="md:col-span-2">
-        <label for="email" class="block text-sm font-geist-mono text-gray-300 mb-2">Email</label>
-        <input id="email" name="email" type="email" required placeholder="you@brand.com" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-500">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur border-b bg-black/80 border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2">
+          <div class="h-6 w-6 rounded-md flex items-center justify-center bg-stone-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-black"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+          </div>
+          <span class="text-base sm:text-lg font-semibold tracking-tight font-geist-mono text-stone-100">ReturnLess</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#how-it-works" class="font-geist-mono text-stone-300 hover:text-stone-100">How it works</a>
+          <a href="#value" class="font-geist-mono text-stone-300 hover:text-stone-100">Value</a>
+          <a href="#pricing" class="font-geist-mono text-stone-300 hover:text-stone-100">Pricing</a>
+          <a href="#faq" class="font-geist-mono text-stone-300 hover:text-stone-100">FAQ</a>
+          <a href="#roi-preview" class="font-medium font-geist-mono text-red-300 hover:text-red-100">ROI preview</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="#roi-preview" id="navJoin" class="hidden sm:inline-flex items-center h-9 px-3 rounded-full border text-sm transition font-geist-mono border-stone-700 text-stone-100 hover:bg-stone-950">Join the beta</a>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg border p-2 border-stone-700">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-100"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg>
+          </button>
+        </div>
       </div>
-      <div>
-        <label for="name" class="block text-sm font-geist-mono text-gray-300 mb-2">Name</label>
-        <input id="name" name="name" type="text" required placeholder="Your name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-500">
-      </div>
-      <div>
-        <label for="company" class="block text-sm font-geist-mono text-gray-300 mb-2">Company/Brand</label>
-        <input id="company" name="company" type="text" required placeholder="Brand Inc." class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-500">
-      </div>
-      <div class="md:col-span-2">
-        <label class="inline-flex items-center mt-4">
-          <input name="consent" type="checkbox" required class="form-checkbox h-4 w-4 text-white">
-          <span class="ml-2 text-sm font-geist-mono text-gray-300">I agree to be contacted about early access.</span>
-        </label>
+      <div id="mobileMenu" class="md:hidden hidden mt-3 pt-3 border-t border-stone-800">
+        <div class="grid gap-2 text-sm">
+          <a href="#how-it-works" class="py-2 font-geist-mono">How it works</a>
+          <a href="#value" class="py-2 font-geist-mono">Value</a>
+          <a href="#pricing" class="py-2 font-geist-mono">Pricing</a>
+          <a href="#faq" class="py-2 font-geist-mono">FAQ</a>
+          <a href="#roi-preview" class="py-2 font-geist-mono text-red-300">ROI preview</a>
+        </div>
       </div>
     </div>
-    <button type="submit" class="w-full mt-6 px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-100 font-geist-mono">
-      Show me the savings
-    </button>
-  </form>
-</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <!-- Copy -->
+        <div class="">
+          <h1 id="heroHeadline" class="sm:text-5xl lg:text-6xl text-3xl font-semibold tracking-tight font-geist-mono text-stone-100">Stop shipping your profits back.</h1>
+          <p class="mt-5 text-base sm:text-lg font-geist-mono text-stone-300">
+            ReturnLess chooses the smartest outcome for every return—keep‑it, exchange, donate, refurbish, resell, or ship‑back—and shows your measured savings.
+          </p>
+          <div id="heroCtas" class="mt-7 flex flex-col sm:flex-row gap-3 sm:items-center">
+            <a id="primaryCta" href="#roi-preview" class="inline-flex items-center justify-center h-11 px-5 rounded-full text-sm font-medium transition font-geist-mono bg-stone-100 text-black hover:bg-stone-200">Join the beta</a>
+            <a id="secondaryCtaHero" href="#roi-preview" class="inline-flex items-center justify-center h-11 px-5 rounded-full border text-sm font-geist-mono border-stone-700 text-stone-100 hover:bg-stone-950">
+              Get an ROI preview
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+          <p class="mt-2 text-xs text-stone-500 font-geist-mono">Limited to 5 new merchants this month.</p>
+
+          <!-- Trust badges -->
+          <div class="mt-6 grid sm:grid-cols-3 gap-3">
+            <div class="rounded-md border px-3 py-2 text-xs font-geist-mono border-stone-800 text-stone-300 bg-black">
+              Shopify/BigCommerce compatible (beta)
+            </div>
+            <div class="rounded-md border px-3 py-2 text-xs font-geist-mono border-stone-800 text-stone-300 bg-black">
+              Savings‑share pricing: no savings, no fee
+            </div>
+            <div class="rounded-md border px-3 py-2 text-xs font-geist-mono border-stone-800 text-stone-300 bg-black">
+              Privacy‑safe demo—no store access required
+            </div>
+          </div>
+
+          <!-- Proof: bullets or ledger -->
+          <div id="proofWrap" class="mt-8">
+            <!-- Bullets (default) -->
+            <div id="proofBullets" class="grid gap-3">
+              <div class="flex items-start gap-3">
+                <div class="h-6 w-6 rounded-md border flex items-center justify-center bg-pink-950 border-pink-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M20 6 9 17l-5-5"></path></svg>
+                </div>
+                <p class="text-sm font-geist-mono text-stone-300">Savings ledger: cash saved, avoided emissions, CX impact</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="h-6 w-6 rounded-md border flex items-center justify-center bg-red-950 border-red-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><path d="M2 6h4"></path><path d="M2 10h4"></path><path d="M2 14h4"></path><path d="M2 18h4"></path><rect width="16" height="20" x="4" y="2" rx="2"></rect><path d="M9.5 8h5"></path><path d="M9.5 12H16"></path><path d="M9.5 16H14"></path></svg>
+                </div>
+                <p class="text-sm font-geist-mono text-stone-300">Preview runs on a sample CSV—no engineering required</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="h-6 w-6 rounded-md border flex items-center justify-center bg-pink-950 border-pink-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                </div>
+                <p class="text-sm font-geist-mono text-stone-300">Fraud guardrails: caps by SKU/customer, velocity checks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illustration -->
+        <div class="relative">
+          <div class="rounded-2xl border p-5 bg-gradient-to-b border-stone-800 from-stone-950 to-black">
+            <h2 class="sr-only font-geist-mono">Return routing options with savings indicator</h2>
+            <!-- Flow SVG -->
+            <div class="relative">
+              <svg role="img" aria-label="Return routing options with savings indicator" viewBox="0 0 640 360" class="w-full h-auto">
+                <!-- Customer -->
+                <rect x="20" y="40" width="140" height="60" rx="12" fill="#0f172a" opacity="0.95"></rect>
+                <text x="90" y="77" text-anchor="middle" font-size="14" fill="#fff" class="font-geist-mono">Customer</text>
+                <!-- Return request -->
+                <rect x="220" y="40" width="160" height="60" rx="12" fill="#334155"></rect>
+                <text x="300" y="77" text-anchor="middle" font-size="14" fill="#fff" class="font-geist-mono">Return request</text>
+                <!-- ReturnLess -->
+                <rect x="440" y="40" width="180" height="60" rx="12" fill="#111827"></rect>
+                <text x="530" y="77" text-anchor="middle" font-size="14" fill="#fff" class="font-geist-mono">ReturnLess</text>
+
+                <!-- Arrows -->
+                <line x1="160" y1="70" x2="220" y2="70" stroke="#94a3b8" stroke-width="2"></line>
+                <polygon points="220,70 212,65 212,75" fill="#94a3b8"></polygon>
+                <line x1="380" y1="70" x2="440" y2="70" stroke="#94a3b8" stroke-width="2"></line>
+                <polygon points="440,70 432,65 432,75" fill="#94a3b8"></polygon>
+
+                <!-- Outcomes -->
+                <rect x="40" y="200" width="120" height="48" rx="10" fill="#10b981" opacity="0.9"></rect>
+                <text x="100" y="230" text-anchor="middle" font-size="12" fill="#fff" class="font-geist-mono">Keep / Exchange</text>
+
+                <rect x="190" y="200" width="120" height="48" rx="10" fill="#38bdf8" opacity="0.9"></rect>
+                <text x="250" y="230" text-anchor="middle" font-size="12" fill="#0b1220" class="font-geist-mono">Donate</text>
+
+                <rect x="340" y="200" width="120" height="48" rx="10" fill="#f59e0b" opacity="0.9"></rect>
+                <text x="400" y="230" text-anchor="middle" font-size="12" fill="#0b1220" class="font-geist-mono">Refurbish / Resell</text>
+
+                <rect x="490" y="200" width="120" height="48" rx="10" fill="#cbd5e1"></rect>
+                <text x="550" y="230" text-anchor="middle" font-size="12" fill="#0b1220" class="font-geist-mono">Ship‑back</text>
+
+                <!-- Routing lines -->
+                <line x1="530" y1="100" x2="100" y2="200" stroke="#cbd5e1" stroke-width="2"></line>
+                <line x1="530" y1="100" x2="250" y2="200" stroke="#cbd5e1" stroke-width="2"></line>
+                <line x1="530" y1="100" x2="400" y2="200" stroke="#cbd5e1" stroke-width="2"></line>
+                <line x1="530" y1="100" x2="550" y2="200" stroke="#cbd5e1" stroke-width="2"></line>
+
+                <!-- $ saved badge -->
+                <circle cx="470" cy="130" r="18" fill="#16a34a"></circle>
+                <text x="470" y="134" text-anchor="middle" font-size="12" fill="#fff" class="font-geist-mono">$</text>
+              </svg>
+            </div>
+
+            <div class="mt-4 rounded-md border p-3 border-stone-800 bg-black">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                  <p class="text-sm font-geist-mono text-stone-200">Modeled savings vs ship‑back baseline</p>
+                </div>
+                <div class="text-sm font-geist-mono text-stone-300">$ saved (preview)</div>
+              </div>
+              <div class="mt-3 h-2 rounded-full overflow-hidden bg-stone-900">
+                <div class="h-2 rounded-full bg-red-500" style="width: 62%;"></div>
+              </div>
+              <p class="mt-2 text-xs text-stone-500 font-geist-mono">Illustrative bar only—your preview shows the measured ledger.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI Preview Form (simplified) -->
+  <section id="roi-preview" class="py-12 sm:py-16 border-t border-stone-800 bg-stone-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-2xl sm:text-4xl tracking-tight font-geist-mono font-semibold text-stone-100">Get your ROI preview (free)</h2>
+          <p class="mt-3 font-geist-mono text-stone-300">We'll run your sample file against our decision engine and email a secure savings ledger preview.</p>
+        </div>
+
+        <!-- Form -->
+        <div class="lg:pl-6">
+          <form name="beta-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="rounded-2xl border p-5 sm:p-6 border-stone-800 bg-black">
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="sm:col-span-2">
+                <label for="email" class="block text-sm font-geist-mono text-stone-300">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@brand.com" class="mt-1 w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-900/10 focus:border-stone-900 border-stone-700">
+              </div>
+              <div>
+                <label for="name" class="block text-sm font-geist-mono text-stone-300">Name</label>
+                <input id="name" name="name" type="text" required placeholder="Your name" class="mt-1 w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-900/10 focus:border-stone-900 border-stone-700">
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-geist-mono text-stone-300">Company/Brand</label>
+                <input id="company" name="company" type="text" required placeholder="Brand Inc." class="mt-1 w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-900/10 focus:border-stone-900 border-stone-700">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="inline-flex items-center gap-2">
+                  <input name="consent" type="checkbox" required class="h-4 w-4 rounded focus:ring-stone-900 border-stone-700 text-stone-100">
+                  <span class="text-sm font-geist-mono text-stone-300">I agree to be contacted about early access.</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="mt-5 w-full inline-flex items-center justify-center h-11 px-5 rounded-full text-sm font-geist-mono bg-stone-100 text-black hover:bg-stone-200">
+              Show me the savings
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
+// Icons
 document.addEventListener('DOMContentLoaded', () => {
   lucide.createIcons({ attrs: { strokeWidth: 1.5 } });
 });
+
+// Mobile menu
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (mobileBtn) {
+  mobileBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+}
 </script>
 
 </body>
