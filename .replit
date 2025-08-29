@@ -1,0 +1,18 @@
+run = "node server.js"
+language = "nodejs"
+
+[packager]
+packageSearch = true
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[env]
+NODE_ENV = "production"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "node server.js"]
