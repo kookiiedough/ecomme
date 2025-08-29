@@ -3,8 +3,20 @@
   command = "ls -la"
   functions = "functions"
 
+[forms]
+  settings = {}
+
+[forms.beta-signup]
+  redirect = "/success.html"
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
+  status = 200
+
+# Ensure success.html is served properly
+[[redirects]]
+  from = "/success.html"
+  to = "/success.html"
   status = 200
 
