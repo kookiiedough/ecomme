@@ -589,7 +589,10 @@
 
         <!-- Form -->
         <div class="lg:pl-6">
-          <form id="previewForm" class="rounded-2xl border p-5 sm:p-6 border-stone-800 bg-black">
+          <form id="previewForm" name="beta-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="rounded-2xl border p-5 sm:p-6 border-stone-800 bg-black">
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="grid sm:grid-cols-2 gap-4">
               <div class="sm:col-span-2">
                 <label for="email" class="block text-sm font-geist-mono text-stone-300" style="">Email</label>
@@ -867,47 +870,41 @@
     }
 
     form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (success) success.classList.add('hidden');
-      if (errorBox) errorBox.classList.add('hidden');
+      // Track the form submission
+      track('form_submit', { email: document.getElementById('email')?.value || '' });
+      
+      // If running locally, prevent default and use fetch
+      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
+        e.preventDefault();
+        if (success) success.classList.add('hidden');
+        if (errorBox) errorBox.classList.add('hidden');
 
-      submitBtn.disabled = true;
-      submitBtn.classList.add('opacity-70','cursor-not-allowed');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-70','cursor-not-allowed');
 
-      const fd = new FormData(form);
-      // Normalize consent to explicit boolean string
-      try {
-        const consentEl = document.getElementById('consent');
-        if (consentEl) {
-          fd.delete('consent');
-          fd.append('consent', String(consentEl.checked));
+        const fd = new FormData(form);
+        
+        try {
+          const res = await fetch('http://localhost:3000/api/beta-signup', { method: 'POST', body: fd });
+          if (!res.ok) throw new Error(`Request failed with ${res.status}`);
+          
+          if (success) success.classList.remove('hidden');
+          form.reset();
+          resetChips();
+          track('form_success');
+        } catch (err) {
+          console.error('Submit failed:', err);
+          if (errorBox) errorBox.classList.remove('hidden');
+          track('form_error', { message: String(err && err.message || err) });
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-70','cursor-not-allowed');
         }
-      } catch {}
-
-      // If running from file://, hit local server directly
-      const endpoint = (location.protocol === 'file:') ? 'http://localhost:3000/api/beta-signup' : '/api/beta-signup';
-
-      try {
-        track('form_submit', { email: document.getElementById('email')?.value || '' });
-        const res = await fetch(endpoint, { method: 'POST', body: fd });
-        if (!res.ok) {
-          const txt = await res.text().catch(() => '');
-          throw new Error(txt || `Request failed with ${res.status}`);
-        }
-        // Success UI
-        if (success) success.classList.remove('hidden');
-        form.reset();
-        resetChips();
-        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        track('form_success');
-      } catch (err) {
-        console.error('Submit failed', err);
-        if (errorBox) errorBox.classList.remove('hidden');
-        track('form_error', { message: String(err && err.message || err) });
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('opacity-70','cursor-not-allowed');
+        return;
       }
+
+      // For production (Netlify), let the form submit naturally
+      // No preventDefault() - let Netlify handle it
     });
 
     // Default hero nav CTA label sync
