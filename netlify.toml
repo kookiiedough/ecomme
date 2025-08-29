@@ -1,8 +1,6 @@
 [build]
   publish = "."
-  functions = "functions"
-
-[dev]
+  command = "ls -la"
   functions = "functions"
 
 [[redirects]]
